@@ -1,0 +1,56 @@
+<doctype html>
+<html>
+<head>
+<title> FCG 2021 - TP5</title>
+
+<!-- estilo-->
+<link href="style.css" rel="stylesheet">
+
+<script type="text/javascript" id="includedscript" src="boxdrawer.js"></script>
+<script type="text/javascript" id="includedscript" src="lightview.js"></script>
+<script type="text/javascript" id="includedscript" src="controles.js"></script>
+<script type="text/javascript" id="includedscript" src="MeshDrawer.js"></script>
+<script type="text/javascript" id="includedscript" src="vertexShader.js"></script>
+<script type="text/javascript" id="includedscript" src="fragmentShaders.js"></script>
+<script type="text/javascript" src="objmesh.js"></script>
+
+</head>
+<body onresize="WindowResize()">
+    <!-- canvas (WebGL)-->
+    <div id="canvas-div"><canvas id="canvas"></canvas></div><div id="controls-div">
+    <!-- menu y controles-->
+    <div id="controls">
+        <div class="control-group"><canvas id="lightcontrol"></canvas><div id="lightcontrol-label">Dirección de la Luz</div></div>
+        <div class="control-group">
+            <div class="control"><input id="show-box" name="show-box" type="checkbox" onchange="DrawScene()" checked /><label for="show-box"> Mostrar caja</label></div>
+            <div class="control"><input id="show-texture" name="show-texture" type="checkbox" onchange="ShowTexture(this)" checked /><label for="show-texture"> Mostrar textura</label></div>
+            <div class="control"><input id="swap-yz" name="swap-yz" type="checkbox" onchange="SwapYZ(this)" /><label for="swap-yz"> Intercambiar Y-Z</label></div>
+            <div class="control"><input id="auto-rotate" name="auto-rotate" type="checkbox" onchange="AutoRotate(this)"/><label for="auto-rotate"> Calesita</label></div>
+            <div class="control"><input id="rotation-speed" type="range" min="1" max="100" value="50" disabled/></div>
+
+            <div class="control"><span id="shininess-label">Brillo:</span><span id="shininess-value">100</span><input id="shininess-exp" type="range" min="0" max="100" value="50" oninput="SetShininess(this)"/></div>
+
+            <div class="control"><input id="cosine-rotate" name="cosine-rotate" type="checkbox" onchange="CosineTimer(this)"/><label for="cosine-rotate"> Velocidad efecto</label></div>
+            <div class="control"><input id="cosine-speed" type="range" min="1" max="200" value="100" disabled/></div>
+
+            <div class="control"><span id="effect-label">Efecto:</span><span id="effect-value">5.00</span><input id="effect-exp" type="range" min="0" max="100" value="50" oninput="SetEffect(this)"/></div>
+
+        </div>
+        <div class="control-group">
+            <div class="control">Modelo:<br/><input id="obj" type="file" onchange="LoadObj(this)" accept=".obj"/></div>
+            <div class="control">Textura:<br/><input id="texture" type="file" onchange="LoadTextureFromInput(this)" accept="image/*"/></div>
+        </div>
+        <div class="control-group">
+            <label for="shader-selection"> Seleccionar Shader: </label></div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="phong" onchange="ReloadFragShader(this)" checked /> Phong Shader</div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="toon" onchange="ReloadFragShader(this)" disabled/> Toon Shader</div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="cosine" onchange="ReloadFragShader(this)" disabled/> Cosine Shader</div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="stripe" onchange="ReloadFragShader(this)" disabled/> Stripe Shader</div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="dot" onchange="ReloadFragShader(this)" disabled/> Dot Shader</div>
+            <div class="control"><input id="shader-selection" name="shader-selection" type="radio" value="pencil" onchange="ReloadFragShader(this)" disabled/> Pencil Shader</div>
+            <img id="texture-img" />
+        </div>
+    </div>
+    </div>
+</body>
+</html>
