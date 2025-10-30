@@ -9,6 +9,12 @@ Made as a final assignment for Computer Graphics subject at the University.
   <img src="./DevlogClips/10-28-2025_Devlog_2.gif" width="400" height="300" />
 </p>
 
+## Table of Contents
+- [Overview](#webgl-shaders-project)
+- [What I Learned](#what-i-learned-throughout-this-course)
+- [Getting Started & Controls](#getting-started--controls)
+
+  
 ## What I learned throughout this course
 
 - Theorical understanding of how:
