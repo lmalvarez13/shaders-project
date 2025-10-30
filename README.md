@@ -50,10 +50,10 @@ Here's a quick guide on how to open and test it yourself:
   2. Then use **Load Texture** button (both .png or .jpg will do) if you want to give it more style (each .obj has its respective texture inside the same folder)
   3. **Lighting Controls**: you can left click the top-right square and change the lighting's direction
   4. **Select a Shader**: on the bottom right of the screen there are multiple shaders that you can test !
-  5. Other Controls: 
-    - **Effect** will control the shader's intensity (0.0 no intensity | 10 full intensity)
-    - **Velocity** can be used for both Cosine Shader and Stripe Shader only
-    - **Calesita** makes the model rotate continuously at a certain speed
+  5. Other Controls:
+     - **Effect** will control the shader's intensity (0.0 no intensity | 10 full intensity)
+     - **Velocity** can be used for both Cosine Shader and Stripe Shader only
+     - **Calesita** makes the model rotate continuously at a certain speed
 
 
 ---
