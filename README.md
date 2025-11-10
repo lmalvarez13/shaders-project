@@ -2,6 +2,9 @@
 ![WebGL](https://img.shields.io/badge/WebGL-GLSL-green)
 ![Javascript](https://img.shields.io/badge/Language-JavaScript-yellow)
 
+Try the project live here:
+🎮 [**WebGL Shader Playground**](https://lmalvarez13.github.io/shaders-project/)
+
 Made as a final assignment for Computer Graphics subject at the University.
 
 <p align="center">
@@ -41,9 +44,6 @@ Made as a final assignment for Computer Graphics subject at the University.
 </p>
 
 ## Getting Started & Controls
-
-Try the project live here:
-🎮 [**WebGL Shader Playground**](https://lmalvarez13.github.io/shaders-project/)
 
 Here's a quick guide on how to open and test it yourself:
   1. Click **Load Model** and select any .obj file (there are a few examples inside [./docs/models](https://github.com/lmalvarez13/shaders-project/tree/main/docs/models))
